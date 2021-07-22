@@ -2,7 +2,7 @@ import React from 'react';
 import reactDOM from 'react-dom';
 import SeasonDisplay from './seasonDisplay';
 import Spiner from './Spiner';
-import App1 from './components/App';
+
 class App extends React.Component{
     state={lat:null,errorMessage:''}
     componentDidMount(){
@@ -31,11 +31,7 @@ class App extends React.Component{
        
     }
 
-    // render(){
-    //     return(
-    //         <div><App1 /></div>
-    //     )
-    // }
+  
 }
 reactDOM.render(<App />,
     document.querySelector('#root'));
