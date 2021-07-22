@@ -1,17 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reactDOM from 'react-dom';
+import SeasonDisplay from './seasonDisplay';
+import Spiner from './Spiner';
+import App1 from './components/App';
+class App extends React.Component{
+    // state={lat:null,errorMessage:''}
+    // componentDidMount(){
+    //     window.navigator.geolocation.getCurrentPosition(
+    //         (position)=>{this.setState({lat:position.coords.latitude})},
+    //         (err)=>{this.setState({errorMessage:err.message})}
+    //     )
+    // }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    // renderContent(){
+    //     if (this.state.errorMessage && !this.state.lat){
+    //         return <div> Error:{this.state.errorMessage}</div>
+    //     }
+    //     if(!this.state.errorMessage && this.state.lat){
+    //         return<div><SeasonDisplay lat={this.state.lat} /></div>
+    //     }
+       
+    //     return <Spiner message='Allow to access location for smooth working'/>
+    // }
+    // render(){ 
+    //     return(
+    //         <div className='border red'>
+    //             {this.renderContent()}
+    //         </div>
+    //     )
+       
+    // }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    render(){
+        return(
+            <div><App1 /></div>
+        )
+    }
+}
+reactDOM.render(<App />,
+    document.querySelector('#root'));
